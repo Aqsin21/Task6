@@ -25,6 +25,8 @@ class Program
         Task15();
         Task16();
         Main();
+        Task17();
+
     }
 
     // task 1
@@ -166,7 +168,7 @@ class Program
             }
             else if (b < a && b < c)
             {
-               Console.WriteLine("ilk gelen herf b herfidir");
+                Console.WriteLine("ilk gelen herf b herfidir");
 
             }
             else if (c < a && c < b)
@@ -177,7 +179,7 @@ class Program
 
     }
     // Task 6
-    static void Task6()     
+    static void Task6()
     {
     l6:
         Console.WriteLine("icinde a herfi olan metn daxil edin");
@@ -214,33 +216,33 @@ class Program
         }
 
     }
-     // Task 8
+    // Task 8
     static void Task8()
-    {    
-        l8:
+    {
+    l8:
         Console.WriteLine("icinde a herfi olan metn daxil edin");
         string Metn = Console.ReadLine();
         int a = Metn.IndexOf('a');
         int b = a + 1;
 
-            for (int i = 0; i < 10; i++)
-            {
-                Console.WriteLine(Metn[b]);
+        for (int i = 0; i < 10; i++)
+        {
+            Console.WriteLine(Metn[b]);
             goto l8;
-            }
-        
-        
+        }
+
+
     }
 
     // Task 9
 
     static void Task9()
     {
-        l9:
+    l9:
         Console.WriteLine("Minumum 6 herfli metn daxil edin");
         string Metn = Console.ReadLine();
 
-        if(Metn.Length<6)
+        if (Metn.Length < 6)
         {
             Console.WriteLine("Daxil edilen metn sertleri odemir");
             goto l9;
@@ -254,10 +256,10 @@ class Program
         char b2 = Metn[1];
         char b3 = Metn[2];
 
-        if(a1==b1&& a2==b2&& a3 == b3)
+        if (a1 == b1 && a2 == b2 && a3 == b3)
         {
             Console.WriteLine("Verilmis metnde ilk 3 her son 3 herfin tersine beraberdir");
-                
+
         }
 
     }
@@ -268,18 +270,18 @@ class Program
         Console.WriteLine("Icinde eded olan metn daxil edin");
         string Metn = Console.ReadLine();
         string result = "";
-        foreach(char c in Metn)
+        foreach (char c in Metn)
         {
             if (char.IsLetter(c))
             {
                 result += c;
             }
-    }
+        }
 
 
-  
 
-       
+
+
 
 
 
@@ -301,7 +303,7 @@ class Program
 
             if (c == 'a')
             {
-               newmetn += 'b';
+                newmetn += 'b';
             }
 
 
@@ -357,22 +359,17 @@ class Program
 
     }
 
-
-
-
-
-
     // Task 13
 
     static void Task13()
     {
-    // 13) Verilimish metinde butun simvollari ardicil shekilde biri balaca, biri boyuk formada cap et. 
-
-      
-    
+        // 13) Verilimish metinde butun simvollari ardicil shekilde biri balaca, biri boyuk formada cap et. 
 
 
-        
+
+
+
+
     }
 
     // Task 14
@@ -401,53 +398,45 @@ class Program
 
 
     // Vurma cedveli
-     
-    static void  Task16()
+
+    static void Task16()
     {
         for (int a = 0; a <= 10; a++)
         {
-             for (int  b = 0; b <= 10; b++)
+            for (int b = 0; b <= 10; b++)
             {
-                Console.WriteLine("{0}x{1}",a,b,a*b);
+                Console.WriteLine("{0}x{1}", a, b, a * b);
             }
             Console.WriteLine();
         }
         Console.ReadLine();
-        
-        
+
+
     }
+    //Vurma cedveli 2
+    static void Task17()
+    {
+        int left = 0;
+        string text = "";
+        for (int a = 2; a <= 9; a++)
+        {
 
+            for (int b = 0; b <= 10; b++)
+            {
+                text = $"{a} x {b.ToString().PadLeft(2)}={(a * b).ToString().PadLeft(2)}";
+                Console.WriteLine(text);
 
+                Console.SetCursorPosition(left, Console.GetCursorPosition().Top + 1);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            }
+            left = (text.Length + 5) * ((a - 1) % 4);
+            Console.SetCursorPosition(left, a >= 5 ? 12 : 0);
+        }
+    }
 }
 
-        
 
 
-    
-        
-           
 
 
 
@@ -461,7 +450,6 @@ class Program
 
 
 
- 
 
 
 
@@ -539,7 +527,6 @@ class Program
 
 
 
-    
 
 
 
@@ -561,5 +548,38 @@ class Program
 
 
 
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
